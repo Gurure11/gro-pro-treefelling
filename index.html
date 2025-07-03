@@ -1,3 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malilani Global Metals Ltd</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    .header {
+      background: linear-gradient(90deg, #000, #333);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 0.75rem;
+      color: #ffc107;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 300px;
+    }
+    .slide img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .home-section, .about-section, .services-section, .contact-section {
+      padding: 4rem 2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    form button {
+      padding: 0.75rem 1.5rem;
+      background-color: #ffc107;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Malilani Global Metals Ltd</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="https://facebook.com/malilaniglobal" target="_blank">Facebook</a>
+      <a href="https://wa.me/447721036149" target="_blank">WhatsApp</a>
+    </nav>
+  </header>
+
+  <div class="slideshow-container">
+    <div class="slide"><img src="images/banner1.jpg" alt="Banner 1"></div>
+    <div class="slide"><img src="images/banner2.jpg" alt="Banner 2"></div>
+    <div class="slide"><img src="images/banner3.jpg" alt="Banner 3"></div>
+  </div>
+
+  <main>
+    <section id="home" class="home-section">
+      <h2>Welcome to Malilani Global Metals Ltd</h2>
+      <p>Exporters of Gold, Cobalt, Copper & Coltan from Africa to the world. Trusted for over a decade.</p>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2>About Us</h2>
+      <p>
+        Malilani Global Metals Ltd has been in existence for over ten years, based in the United Kingdom.
+        We specialize in the export of minerals such as Gold, Cobalt, Copper, and Coltan from Africa to many
+        nations across the world. With years of experience in mining operations and international logistics,
+        we pride ourselves on professionalism, sustainability, and trust.
+      </p>
+    </section>
+
+    <section id="services" class="services-section">
+      <h2>Our Services</h2>
+
+      <h3>Gold Mining</h3>
+      <div class="gallery">
+        <img src="images/gold1.jpg" alt="Gold 1">
+        <img src="images/gold2.jpg" alt="Gold 2">
+        <img src="images/gold3.jpg" alt="Gold 3">
+        <img src="images/gold4.jpg" alt="Gold 4">
+        <img src="images/gold5.jpg" alt="Gold 5">
+      </div>
+
+      <h3>Copper Mining</h3>
+      <div class="gallery">
+        <img src="images/copper1.jpg" alt="Copper 1">
+        <img src="images/copper2.jpg" alt="Copper 2">
+        <img src="images/copper3.jpg" alt="Copper 3">
+        <img src="images/copper4.jpg" alt="Copper 4">
+        <img src="images/copper5.jpg" alt="Copper 5">
+      </div>
+
+      <h3>Cobalt Mining</h3>
+      <div class="gallery">
+        <img src="images/cobalt1.jpg" alt="Cobalt 1">
+        <img src="images/cobalt2.jpg" alt="Cobalt 2">
+        <img src="images/cobalt3.jpg" alt="Cobalt 3">
+        <img src="images/cobalt4.jpg" alt="Cobalt 4">
+        <img src="images/cobalt5.jpg" alt="Cobalt 5">
+      </div>
+
+      <h3>Coltan Mining</h3>
+      <div class="gallery">
+        <img src="images/coltan1.jpg" alt="Coltan 1">
+        <img src="images/coltan2.jpg" alt="Coltan 2">
+        <img src="images/coltan3.jpg" alt="Coltan 3">
+        <img src="images/coltan4.jpg" alt="Coltan 4">
+        <img src="images/coltan5.jpg" alt="Coltan 5">
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Email: info@malilaniglobalmetals.com</p>
+      <p>Phone: +447721 036149</p>
+      <p>Address: 17 Birchwood Chineham, Basingstoke, HAMPSHIRE, United Kingdom, RG24 8TY</p>
+      <form action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Malilani Global Metals Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const showSlides = () => {
+      const slides = document.getElementsByClassName(\"slide\");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = \"none\";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = \"block\";
+      setTimeout(showSlides, 3000);
+    };
+    showSlides();
+
+    document.getElementById(\"year\").innerText = new Date().getFullYear();
+  </script>
+
+
+
 <section id="contact" class="contact-section">
   <h2>Contact Us</h2>
   <p>Email: info@malilaniglobalmetals.com</p>
@@ -16,3 +213,5 @@
     <button type="submit" style="padding: 0.75rem 1.5rem; background-color: #ffc107; border: none; cursor: pointer; font-weight: bold;">Send Message</button>
   </form>
 </section>
+  </body>
+</html>
