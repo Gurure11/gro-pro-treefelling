@@ -1,217 +1,201 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malilani Global Metals Ltd</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-    }
-    .header {
-      background: linear-gradient(90deg, #000, #333);
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      margin: 0 0.75rem;
-      color: #ffc107;
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-    }
-    .slide {
-      display: none;
-      width: 100%;
-      height: 300px;
-    }
-    .slide img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-    .home-section, .about-section, .services-section, .contact-section {
-      padding: 4rem 2rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .footer {
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    form button {
-      padding: 0.75rem 1.5rem;
-      background-color: #ffc107;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
+    .swiper { width: 100%; height: 500px; }
+    .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+    .mineral-section { scroll-margin-top: 80px; }
   </style>
 </head>
-<body>
+<body class="bg-gray-100 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-gray-900 text-white fixed w-full z-10 top-0 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Malilani Global Metals Ltd</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-400">About Us</a></li>
+        <li><a href="#minerals" class="hover:text-yellow-400">Minerals</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <header class="header">
-    <h1>Malilani Global Metals Ltd</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="https://facebook.com/malilaniglobal" target="_blank">Facebook</a>
-      <a href="https://wa.me/447721036149" target="_blank">WhatsApp</a>
-    </nav>
-  </header>
+  <!-- Hero Section with Slider -->
+  <section id="home" class="pt-20">
+    <div class="swiper hero-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/1600x900/?mining" alt="Mining Operation">
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <h2 class="text-4xl font-bold text-white">Leading the Way in Global Metal Exports</h2>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/1600x900/?copper" alt="Copper Mining">
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <h2 class="text-4xl font-bold text-white">Premium Copper Solutions</h2>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/1600x900/?gold" alt="Gold Mining">
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <h2 class="text-4xl font-bold text-white">Excellence in Gold Extraction</h2>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
 
-  <div class="slideshow-container">
-    <div class="slide"><img src="images/banner1.jpg" alt="Banner 1"></div>
-    <div class="slide"><img src="images/banner2.jpg" alt="Banner 2"></div>
-    <div class="slide"><img src="images/banner3.jpg" alt="Banner 3"></div>
-  </div>
-
-  <main>
-    <section id="home" class="home-section">
-      <h2>Welcome to Malilani Global Metals Ltd</h2>
-      <p>Exporters of Gold, Cobalt, Copper & Coltan from Africa to the world. Trusted for over a decade.</p>
-    </section>
-
-    <section id="about" class="about-section">
-      <h2>About Us</h2>
-      <p>
-        Malilani Global Metals Ltd has been in existence for over ten years, based in the United Kingdom.
-        We specialize in the export of minerals such as Gold, Cobalt, Copper, and Coltan from Africa to many
-        nations across the world. With years of experience in mining operations and international logistics,
-        we pride ourselves on professionalism, sustainability, and trust.
+  <!-- About Us Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
+        Malilani Global Metals Ltd has been a trusted name in the mining and metal export industry for years. With hundreds of satisfied clients and glowing testimonials, we specialize in the extraction, processing, and export of high-quality minerals including Copper, Gold, Cobalt, Coltan, and many others, both processed and unprocessed. Headquartered in the United Kingdom, with a strategic branch in Dubai, we are committed to excellence and sustainability in global metal markets.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section id="services" class="services-section">
-      <h2>Our Services</h2>
+  <!-- Minerals Section -->
+  <section id="minerals" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Minerals</h2>
 
-      <h3>Gold Mining</h3>
-      <div class="gallery">
-        <img src="images/gold1.jpg" alt="Gold 1">
-        <img src="images/gold2.jpg" alt="Gold 2">
-        <img src="images/gold3.jpg" alt="Gold 3">
-        <img src="images/gold4.jpg" alt="Gold 4">
-        <img src="images/gold5.jpg" alt="Gold 5">
+      <!-- Copper Section -->
+      <div class="mineral-section mb-16" id="copper">
+        <h3 class="text-2xl font-semibold mb-4">Copper</h3>
+        <p class="text-gray-700 mb-6">Our copper mining operations deliver high-purity copper for global industries.</p>
+        <div class="swiper mineral-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?copper,mine" alt="Copper Mine"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?copper,ore" alt="Copper Ore"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?copper,processing" alt="Copper Processing"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?copper,metal" alt="Copper Metal"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?copper,equipment" alt="Copper Equipment"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
 
-      <h3>Copper Mining</h3>
-      <div class="gallery">
-        <img src="images/copper1.jpg" alt="Copper 1">
-        <img src="images/copper2.jpg" alt="Copper 2">
-        <img src="images/copper3.jpg" alt="Copper 3">
-        <img src="images/copper4.jpg" alt="Copper 4">
-        <img src="images/copper5.jpg" alt="Copper 5">
+      <!-- Gold Section -->
+      <div class="mineral-section mb-16" id="gold">
+        <h3 class="text-2xl font-semibold mb-4">Gold</h3>
+        <p class="text-gray-700 mb-6">Premium gold extraction with cutting-edge technology and sustainable practices.</p>
+        <div class="swiper mineral-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?gold,mine" alt="Gold Mine"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?gold,ore" alt="Gold Ore"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?gold,processing" alt="Gold Processing"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?gold,metal" alt="Gold Metal"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?gold,equipment" alt="Gold Equipment"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
 
-      <h3>Cobalt Mining</h3>
-      <div class="gallery">
-        <img src="images/cobalt1.jpg" alt="Cobalt 1">
-        <img src="images/cobalt2.jpg" alt="Cobalt 2">
-        <img src="images/cobalt3.jpg" alt="Cobalt 3">
-        <img src="images/cobalt4.jpg" alt="Cobalt 4">
-        <img src="images/cobalt5.jpg" alt="Cobalt 5">
+      <!-- Cobalt Section -->
+      <div class="mineral-section mb-16" id="cobalt">
+        <h3 class="text-2xl font-semibold mb-4">Cobalt</h3>
+        <p class="text-gray-700 mb-6">High-quality cobalt for advanced technological applications.</p>
+        <div class="swiper mineral-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?cobalt,mine" alt="Cobalt Mine"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?cobalt,ore" alt="Cobalt Ore"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?cobalt,processing" alt="Cobalt Processing"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?cobalt,metal" alt="Cobalt Metal"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?cobalt,equipment" alt="Cobalt Equipment"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
 
-      <h3>Coltan Mining</h3>
-      <div class="gallery">
-        <img src="images/coltan1.jpg" alt="Coltan 1">
-        <img src="images/coltan2.jpg" alt="Coltan 2">
-        <img src="images/coltan3.jpg" alt="Coltan 3">
-        <img src="images/coltan4.jpg" alt="Coltan 4">
-        <img src="images/coltan5.jpg" alt="Coltan 5">
+      <!-- Coltan Section -->
+      <div class="mineral-section mb-16" id="coltan">
+        <h3 class="text-2xl font-semibold mb-4">Coltan</h3>
+        <p class="text-gray-700 mb-6">Ethically sourced coltan for the electronics industry.</p>
+        <div class="swiper mineral-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?coltan,mine" alt="Coltan Mine"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?coltan,ore" alt="Coltan Ore"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?coltan,processing" alt="Coltan Processing"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?coltan,metal" alt="Coltan Metal"></div>
+            <div class="swiper-slide"><img src="https://source.unsplash.com/800x600/?coltan,equipment" alt="Coltan Equipment"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="contact-section">
-      <h2>Contact Us</h2>
-      <p>Email: info@malilaniglobalmetals.com</p>
-      <p>Phone: +447721 036149</p>
-      <p>Address: 17 Birchwood Chineham, Basingstoke, HAMPSHIRE, United Kingdom, RG24 8TY</p>
-      <form action="#" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-lg text-gray-700 mb-4"><strong>Address:</strong> 17 Birchwood, Chineham, Basingstoke, Hampshire, United Kingdom, RG24 8TY</p>
+        <p class="text-lg text-gray-700 mb-4"><strong>Email:</strong> info@malilaniglobalmetals.com</p>
+        <p class="text-lg text-gray-700 mb-4"><strong>Phone:</strong> +44 123 456 7890</p>
+        <div class="flex justify-center space-x-6 mt-6">
+          <a href="https://facebook.com" target="_blank" class="text-gray-900 hover:text-blue-600">
+            <i class="fab fa-facebook-f text-2xl"></i>
+          </a>
+          <a href="https://whatsapp.com" target="_blank" class="text-gray-900 hover:text-green-600">
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; <span id="year"></span> Malilani Global Metals Ltd. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Malilani Global Metals Ltd. All rights reserved.</p>
+      <p class="mt-2">Head Office: 17 Birchwood, Chineham, Basingstoke, Hampshire, United Kingdom, RG24 8TY</p>
+      <p>Branch: Dubai, UAE</p>
+    </div>
   </footer>
 
+  <!-- Swiper Initialization Script -->
   <script>
-    let slideIndex = 0;
-    const showSlides = () => {
-      const slides = document.getElementsByClassName(\"slide\");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = \"none\";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      slides[slideIndex - 1].style.display = \"block\";
-      setTimeout(showSlides, 3000);
-    };
-    showSlides();
+    // Hero Slider
+    new Swiper('.hero-slider', {
+      loop: true,
+      autoplay: { delay: 5000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 
-    document.getElementById(\"year\").innerText = new Date().getFullYear();
+    // Mineral Sliders
+    document.querySelectorAll('.mineral-slider').forEach(slider => {
+      new Swiper(slider, {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    });
   </script>
-
-
-
-<section id="contact" class="contact-section">
-  <h2>Contact Us</h2>
-  <p>Email: info@malilaniglobalmetals.com</p>
-  <p>Phone: +447721 036149</p>
-  <p>Address: 17 Birchwood Chineham, Basingstoke, HAMPSHIRE, United Kingdom, RG24 8TY</p>
-  <form action="#" method="post" style="margin-top: 1.5rem; max-width: 600px;">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
-
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
-
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea><br>
-
-    <button type="submit" style="padding: 0.75rem 1.5rem; background-color: #ffc107; border: none; cursor: pointer; font-weight: bold;">Send Message</button>
-  </form>
-</section>
-  </body>
+</body>
 </html>
